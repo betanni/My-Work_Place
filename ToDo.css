@@ -1,0 +1,43 @@
+/* Style of ToDo list */
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+.container {
+  width: 360px;
+  background-color: white;
+  padding: 33px;
+  margin-left: 33px;
+  text-align: center;
+  align-items: center;
+}
+input {
+  font-size: 19px;
+  border: 2px solid aqua;
+  padding: 10px;
+  width: 270px;
+  background-color: rgb(230, 241, 241);
+  outline: none;
+}
+button {
+  color: whitesmoke;
+  width: auto;
+  font-size: 19px;
+  cursor: pointer;
+  padding: 11px;
+  border: none;
+  background-color: rgb(4, 26, 26);
+}
+.text ul {
+  position: relative;
+  background-color: rgb(5, 31, 31);
+  color: white;
+  font-size: 19px;
+  padding: 8px;
+  text-align: left;
+}
+.text ul i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
