@@ -21,9 +21,9 @@ const resetGame = () => {
     enableBoxs(); // Renamed this function to clear the boxes and enable them
     msgcontainer.classList.add("hide");
 };
-const DrawGame = ()=>{
-    box.innerText="O,x";
-    msg.innerText="Match Draw";
+const DrawGame = () => {
+    box.innerText = "O,x";
+    msg.innerText = "Match Draw";
 }
 
 boxs.forEach((box) => {
@@ -36,55 +36,55 @@ boxs.forEach((box) => {
             box.innerHTML = "X";
             TurnO = true;
         }
-      box.disabled= true;
-        
+        box.disabled = true;
 
-      checkwinner()
+
+        checkwinner()
     });
 });
 
 
-const checkwinner =() => {
-    for(let pattern of winpatterns){
+const checkwinner = () => {
+    for (let pattern of winpatterns) {
         let pos1val = boxs[pattern[0]].innerText;
         let pos2val = boxs[pattern[1]].innerText;
         let pos3val = boxs[pattern[2]].innerText;
 
-        if(pos1val != "" && pos2val != "" && pos2val != "" && pos3val != ""){
+        if (pos1val != "" && pos2val != "" && pos2val != "" && pos3val != "") {
 
-            if(pos1val === pos2val && pos2val === pos3val){
-                console.log("Winner" , pos1val);
+            if (pos1val === pos2val && pos2val === pos3val) {
+                console.log("Winner", pos1val);
                 showWineer(pos1val)
             }
-        } 
-}
+        }
+    }
 };
 const disableBoxes = () => {
     for (let box of boxs) {
         box.disabled = true; // Enable the boxes after reset
-           DrawGame()
+        DrawGame()
     }
 };
 
-const enableBoxs = ()=>{
-    for(let box of boxs){
+const enableBoxs = () => {
+    for (let box of boxs) {
         box.disabled = false;
-        box.innerText = "";  
+        box.innerText = "";
     }
 }
 
 
-const showWineer = (winner)=> {
-    msg.innerText=`Congratulations Winner is ${winner}`;
+const showWineer = (winner) => {
+    msg.innerText = `Congratulations Winner is ${winner}`;
     msgcontainer.classList.remove("hide")
     disableBoxes()
 }
 
 
-newGame.addEventListener("click" , resetGame)
-resetBtn.addEventListener("click" , resetGame)
+newGame.addEventListener("click", resetGame)
+resetBtn.addEventListener("click", resetGame)
 
-                                         //Game end here||
+//Game end here||
 
 // for (let i = 0; i < 9; i++) {
 //    setTimeout(() => {
