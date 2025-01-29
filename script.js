@@ -1,7 +1,12 @@
-var main = document.querySelector(".main");
-var crsr = document.querySelector("h2");
+const con = document.querySelector(".container");
+const card = document.querySelector(".card");
+const like = document.querySelector("#like");
 
-main.addEventListener("mousemove", (e) => {
-    crsr.style.left = e.x + "px";
-    crsr.style.top = e.y + "px";
-});
+card.addEventListener("dblclick", () => {
+    like.style.transform= "translate(-50%, -50%) scale(1.2)"; 
+
+    setTimeout(() => {
+        like.style.transform= "translate(-50%, -50%) scale(0)"; 
+        
+    }, 2000);
+})
